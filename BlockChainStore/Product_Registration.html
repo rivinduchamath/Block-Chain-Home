@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 50px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0 ;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family:'Times New Roman';
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="http://127.0.0.1:5000/register" method="POST">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to register your product.</p>
+    <hr>
+
+    <label for="OwnerID"><b>Owner ID</b></label>
+    <input type="text" placeholder="Enter your ID" name="OwnerID" required>
+
+
+    <label for="UPC"><b>UPC</b></label>
+    <input type="text" placeholder="123456789" name="UPC" required>
+
+    <label for="itemno"><b>Item Number</b></label>
+    <input type="text" placeholder="123456789" name="itemno" required>
+
+    <label for="Name"><b>Product Name</b></label>
+    <input type="text" placeholder="Enter Product Name" name="Name" required>
+
+    <label for="Description"><b>Product Description</b></label>
+    <input type="text" placeholder="Enter description here" name="Description" required>
+
+    <label for="weight"><b>Product weight </b></label>
+    <input type="text" placeholder="Enter weight here" name="weight" >
+
+    <br/>
+    <br/>
+
+    <label for="Cost"><b>Product Cost ($)</b></label>
+    <input type="number" placeholder="Enter cost here" name="Cost" required>
+
+    <br/>
+    <br/>
+
+
+    <label for="Expiry Date"><b>Expiry Date</b></label>
+    <input type="date" name="Expiry Date" required>
+
+    <hr>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+
+</form>
+
+</body>
+</html>
